@@ -2,6 +2,7 @@ package com.proyecto_citas.sistema_de_citas.model;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.proyecto_citas.sistema_de_citas.enums.EstadoCita;
 
 import jakarta.persistence.Entity;
@@ -36,6 +37,7 @@ public class Cita {
 
     @NotNull
     @ManyToOne
+    @JsonIgnore
     private Cliente cliente;
 
     @Enumerated(EnumType.STRING)
